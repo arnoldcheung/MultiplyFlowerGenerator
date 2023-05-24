@@ -66,6 +66,12 @@ function setupMessageInput(){
 	messageInput.input(sanitizeMessageInput);
 	// messageInput.touchStarted(signatureEvent);
 	// messageInput.mouseClicked(signatureEvent);
+
+  generateIntroText = createDiv(getTranslation("generateInstruction"));
+	generateIntroText.parent(controlPanel);
+	generateIntroText.addClass('controlPanelText');
+  // generateIntroText.addClass('en-font');
+	generateIntroText.position(messageInput.x, messageInput.y + messageInput.height + 15);	
 }
 
 
@@ -85,11 +91,7 @@ function setupMessageInput(){
 
 // sets up the Number input field ----------------------------------------------------------------------------------------
 function setupNumberInput(){
-  generateIntroText = createDiv(getTranslation("generateInstruction"));
-	generateIntroText.parent(controlPanel);
-	generateIntroText.addClass('controlPanelText');
-  // generateIntroText.addClass('en-font');
-	generateIntroText.position(messageInput.x, messageInput.y + messageInput.height + 15);	
+
 
 	numberInput = createInput(getTranslation("eightDigitInstruction"));
 	numberInput.parent(controlPanel);
@@ -134,7 +136,7 @@ function setupColorPicker(){
 	elementName = createDiv(getTranslation('colorNameList')[currentColorSelectionIndex]);
 	elementName.id("elementName")
 	elementName.style('color', colorList[currentColorSelectionIndex]);
-	elementName.position(numberInput.x, orTxt.y + 30); // ***************************************************************************
+	elementName.position(nameInput.x, generateIntroText.y + 30); // ***************************************************************************
 	elementName.parent(controlPanel);
 		
 	// Create a button to toggle color selection ----------------------------------------------------------------------------------------
@@ -155,7 +157,7 @@ function setupColorPicker(){
 	colorIntroText.parent(controlPanel);
 	colorIntroText.addClass('controlPanelText');
   // colorIntroText.addClass('en-font');
-	colorIntroText.position(orTxt.x, elementName.y + elementName.height + 10);	
+	colorIntroText.position(nameInput.x, elementName.y + elementName.height + 30);	
 
   // Sets up the color picker ----------------------------------------------------------------------------------------\
 	iroPickerDiv = createDiv();
@@ -176,6 +178,11 @@ function setupColorPicker(){
 function setupStartStop(){
   // The font button next to the name input ----------------------------------------------------------------------------------------
  
+  // startStopIntroText = createDiv(getTranslation("startStopInstruction"));
+	// startStopIntroText.parent(controlPanel);
+	// startStopIntroText.addClass('controlPanelText');
+	// startStopIntroText.position(iroPickerDiv.x, movementCheckboxs.y + 30);
+
   startButton = createButton(getTranslation("startInstruction"));
   startButton.addClass('button-38');
   startButton.parent(controlPanel);
@@ -183,9 +190,15 @@ function setupStartStop(){
   // fontButton.style('font-size', '16px');
   // startButton.position(nameInput.x, movementCheckbox.y + 50);
   startButton.mouseClicked(toggleOngoing);
+
+  sizeText = createDiv(getTranslation("startStopInstruction") + floor(punto_r));
+	sizeText.parent(controlPanel);
+	sizeText.addClass('controlPanelText');
+
   resetStartStop();
   // fontButton.touchEnded(toggleFontSelection);
- 
+  
+
  }
 
 
@@ -290,12 +303,13 @@ function resetMessageInput(){
   messageInput.style('height', '20px');
   messageInput.value(getTranslation("messageInputDefaultInstruction"));
 
+  generateIntroText.html(getTranslation("generateInstruction"));
+  generateIntroText.position(messageInput.x, messageInput.y + messageInput.height + 30);
 }
 
 function resetNumberInput(){
 
-  generateIntroText.html(getTranslation("generateInstruction"));
-  generateIntroText.position(messageInput.x, messageInput.y + messageInput.height + 15);	
+
 
 	numberInput.style('width', controlPanel.width * 0.6 + 'px');
 	numberInput.style('height', '20px');
@@ -312,13 +326,13 @@ function resetNumberInput(){
 function resetColorPicker(){
 
   elementName.html(getTranslation('colorNameList')[currentColorSelectionIndex]);
-	elementName.position(numberInput, orTxt.y + 30); // ***************************************************************************
+	elementName.position(nameInput, generateIntroText.y + 30); // ***************************************************************************
 
   nextElementButton.html(getTranslation("nextElementInstruction"));
   nextElementButton.position(fontButton.x + fontButton.width - nextElementButton.width, elementName.y);
 
   colorIntroText.html(getTranslation("colorInstruction"));
-  colorIntroText.position(orTxt.x, elementName.y + elementName.height + 10);	
+  colorIntroText.position(nameInput.x, elementName.y + elementName.height + 30);	
 
 	iroPickerDiv.position(30, colorIntroText.y + colorIntroText.height + 10);
 	
@@ -330,9 +344,16 @@ function resetColorPicker(){
 
 function resetStartStop(){
   // The font button next to the name input ----------------------------------------------------------------------------------------
- 
+  // startStopIntroText.html(getTranslation("startStopInstruction"));;
+	// startStopIntroText.position(iroPickerDiv.x, movementCheckbox.y + 30);
+
   startButton.html(getTranslation('startInstruction'));
-  startButton.position(nameInput.x, movementCheckbox.y  + 100);
+  startButton.position(nameInput.x, movementCheckbox.y  + 50);
+
+  sizeText.html(getTranslation("sizeInstruction") + floor(punto_r));
+	// startStopIntroText.parent(controlPanel);
+	// startStopIntroText.addClass('controlPanelText');
+	sizeText.position(iroPickerDiv.x + 100, startButton.y + startButton.height / 2);
 
  }
 

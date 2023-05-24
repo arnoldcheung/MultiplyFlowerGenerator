@@ -12,8 +12,7 @@ function drawPunto(){
 	
 	// puntoGraphics.ellipse(puntoGraphics.width / 2, puntoGraphics.height / 2, 200, 200);
 	
-
-
+	sizeText.html(getTranslation("sizeInstruction") + floor(punto_r));
 
 	if(ongoing){
 		if (punto_r > 0){

@@ -52,7 +52,7 @@ let universeNumber;
 
 let sliderIntroText;
 
-let sliderSpacing = 40;
+let sliderSpacing = 50;
 
 let size_slider;
 
@@ -100,17 +100,21 @@ let mySignature = '';
 let myMessage = '';
 
 
+let sizeText;
+
 let noise_f_angle;
 let noise_f_time;
+
 
 // color selection toggle ----------------------------------------------------------------------------------------
 
 let colorList = ['#00FFFF', // flower
 				'#000000',
-				'#000000'] // bg
+				'#FFFFFF'] // bg
 
 let colorNameList = ['Flower',
-					'Background']
+					'Background',
+					'Signatures']
 
 let numSelectableColors = colorList.length;
 let currentColorSelectionIndex = 0;
@@ -186,7 +190,7 @@ function setup() {
 
 	setupMessageInput();
 	
-	setupNumberInput();
+	// setupNumberInput();
 	
 	setupColorPicker();
 	

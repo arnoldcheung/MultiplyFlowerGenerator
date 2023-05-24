@@ -3,7 +3,7 @@
 function togglePanel() {
 	panelVisible = !panelVisible;
 	controlPanel.style('display', panelVisible ? 'block' : 'none');
-	hideShowButton.html(panelVisible ? 'Hide Control' : 'Show Control');
+	hideShowButton.html(panelVisible ? getTranslation('hideControlInstruction') : getTranslation('showControlInstruction'));
 }
 
 // Function to toggle the language and re-render the text
@@ -15,6 +15,8 @@ function toggleOngoing() {
 	}
 
 	beginning = false;	
+
+	startButton.html(ongoing ? getTranslation('stopInstruction') : getTranslation('startInstruction'));
 }
 
 // function that toggles the color selection cycle ----------------------------------------------------------------------------------------
@@ -226,7 +228,7 @@ function resetUniverse() {
 	colorList = [
 		'#00FFFF', // flower
 		'#000000',
-		'#000000'] // bg
+		'#FFFFFF'] // bg
 
 	currentColorSelectionIndex = 0;
 
@@ -286,7 +288,7 @@ function resetUniverse() {
 	resetControlPanel();
 	resetNameInput();
 	resetMessageInput();
-	resetNumberInput();
+	// resetNumberInput();
 	resetColorPicker();
 	resetCheckboxes();
 	resetSliders();
