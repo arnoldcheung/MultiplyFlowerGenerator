@@ -13,7 +13,7 @@ function setupBottomBanner(){
     bottomBannerGraphics.textStyle(ITALIC);
     bottomBannerGraphics.textAlign(RIGHT, BOTTOM);
     bottomBannerGraphics.textSize(20);
-    bottomBannerGraphics.text("Generative Art by Multiply Studio & Technologies Limited ", bottomBannerGraphics.width - 10, bottomBannerGraphics.height / 2);
+    bottomBannerGraphics.text("Generative Art by Multiply Studio & Technologies Limited - IG : @multiply.tech", bottomBannerGraphics.width - 10, bottomBannerGraphics.height / 2);
     bottomBannerGraphics.pop();
 }
 
@@ -31,7 +31,7 @@ function resetBottomBanner(){
     bottomBannerGraphics.textStyle(ITALIC);
     bottomBannerGraphics.textAlign(RIGHT, BOTTOM);
     bottomBannerGraphics.textSize(20);
-    bottomBannerGraphics.text(" Generative Art by Multiply Studio & Technologies Limited ", bottomBannerGraphics.width - 10, bottomBannerGraphics.height / 2);
+    bottomBannerGraphics.text(" Generative Art by Multiply Studio & Technologies Limited - IG : @multiply.tech", bottomBannerGraphics.width - 10, bottomBannerGraphics.height / 2);
     bottomBannerGraphics.pop();
 
 }

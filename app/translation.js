@@ -20,7 +20,7 @@ const translations = {
         captureInstruction: "Capture",
         resetInstruction: "Reset",
         adjustSliderInstruction: '⬅ Adjust the composition ⮕',
-        exhibitionTitle: " Generative Art by Multiply Studio & Technologies Limited ",
+        exhibitionTitle: " Generative Art by Multiply Studio & Technologies Limited - IG : @multiply.tech",
 
         colorNameList: [
             'Flower',  
@@ -55,7 +55,7 @@ const translations = {
         captureInstruction: "截圖",
         resetInstruction: "重置",
         adjustSliderInstruction: '⬅調整構圖⮕',
-        exhibitionTitle: " Generative Art by Multiply Studio & Technologies Limited ",
+        exhibitionTitle: " Generative Art by Multiply Studio & Technologies Limited - IG : @multiply.tech",
 
         colorNameList: [
           '花',
