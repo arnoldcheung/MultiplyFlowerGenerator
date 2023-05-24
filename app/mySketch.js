@@ -281,6 +281,9 @@ function draw() {
 	// 	mainCanvas.image(energyGraphics, 0, 0); // the radiating squares
 	// 	mainCanvas.pop();
 	// }
+
+	mainCanvas.image(bottomBannerGraphics, 0, height - buttonMenuHeight);
+
 	
 	// signature ----------------------------------------------------------------------------------------
 	if(signature){
@@ -317,7 +320,6 @@ function draw() {
 		mainCanvas.pop();
 	}
 
-	mainCanvas.image(bottomBannerGraphics, 0, height - buttonMenuHeight);
 		
 	// composing the canvas ----------------------------------------------------------------------------------------
 	// base

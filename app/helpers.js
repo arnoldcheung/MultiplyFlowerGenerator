@@ -160,7 +160,7 @@ function createMetaTag() {
 // Event function for capturing the canvas, to be added with qr code function ----------------------------------------------------------------------------------------
 async function captureCanvas(){
 	// mainCanvas.save('universe.png');
-	mainCanvas.image(bottomBannerGraphics, 0, height - buttonMenuHeight);
+	// mainCanvas.image(bottomBannerGraphics, 0, height - buttonMenuHeight);
 
 	// Initialize Cloudinary
 	const cloudName = 'dfipkxvuc';
@@ -274,10 +274,12 @@ function resetUniverse() {
 	energyGraphics.resizeCanvas(min(width, height), min(width, height));
 	radiationGraphics.resizeCanvas(max(width, height), max(width, height));
 	// waveGraphics.resizeCanvas(width, height);
-	bottomBannerGraphics.resizeCanvas(width, buttonMenuHeight)
+	bottomBannerGraphics.resizeCanvas(width, buttonMenuHeight);
 
 	// re-setup the star graphics
 	drawStars(3000, {minSize: 1, maxSize: 5, canvas: starsGraphics});
+
+	resetBottomBanner();
 
 
 	// reset the control panels and their buttons / sliders
