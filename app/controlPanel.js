@@ -216,7 +216,7 @@ function setupButtonMenu(){
   buttonMenuDiv.addClass('controlPanel');
 
   // Create an image element for the logo and add it to the menu bar div
-  logoImg = createImg("assets/logos/MGM 3D Logo.png", "Logo");
+  logoImg = createImg("assets/logos/Multiply-Logo-Simple.png", "Logo");
 
   logoImg.parent(buttonMenuDiv);
 

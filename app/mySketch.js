@@ -131,7 +131,7 @@ let logoImg;
 let exhibitionTitleDiv;
 
 function preload() {
-	logo = loadImage("assets/logos/MGM 3D Logo.png");
+	logo = loadImage("assets/logos/Multiply-Logo-Simple.png");
 
 	enFont1 = loadFont("assets/fonts/FontsFree-Net-Proxima-Nova-Sbold.otf");
 	enFont2 = loadFont("assets/fonts/Cinzel-ExtraBold.ttf");

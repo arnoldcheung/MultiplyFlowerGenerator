@@ -20,7 +20,7 @@ const translations = {
         captureInstruction: "Capture",
         resetInstruction: "Reset",
         adjustSliderInstruction: '⬅ Adjust the composition ⮕',
-        exhibitionTitle: "《超元‧萬象: 蕭勤的藝術》‘To Infinity and Beyond: The Art of Hsiao Chin’ ",
+        exhibitionTitle: " Generative Art by Multiply Studio & Technologies Limited ",
 
         colorNameList: [
             'Flower',  
@@ -55,7 +55,7 @@ const translations = {
         captureInstruction: "截圖",
         resetInstruction: "重置",
         adjustSliderInstruction: '⬅調整構圖⮕',
-        exhibitionTitle: "《超元‧萬象: 蕭勤的藝術》‘To Infinity and Beyond: The Art of Hsiao Chin’",
+        exhibitionTitle: " Generative Art by Multiply Studio & Technologies Limited ",
 
         colorNameList: [
           '花',
