@@ -296,7 +296,7 @@ function draw() {
 		mainCanvas.textFont(currentFont);
 		mainCanvas.textAlign(RIGHT, BOTTOM);
 		mainCanvas.textSize(20);
-		mainCanvas.text(mySignature + ' @MGM', width - 10, height - 5 - buttonMenuHeight);
+		mainCanvas.text(mySignature, width - 10, height - 5 - buttonMenuHeight);
 		mainCanvas.pop();
 	}
 
